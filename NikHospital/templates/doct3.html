@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doct3</title>
+    {% load static %}
+    <style>
+               *{
+        margin:0px;
+        padding:0px;
+        }
+        .container{
+            text-align: center;
+            color: blue;
+
+            border: 2px solid gray;
+            background-color: gray;
+        }
+        img{
+            border-radius: 50cm;
+            border:3px solid black;
+        }
+        .drs{
+        padding-top:3cm;
+        }
+        .drs p{
+
+        padding:50px 100px 50px 100px;
+        }
+
+        .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset;
+
+    position: fixed;
+     background-color: rgba(255, 192, 203, 0.5);
+            backdrop-filter: blur(40px);
+}
+
+.logo{
+     margin-left:20px ;
+    margin-right:20.6cm;
+<!--    margin-top: 2px;-->
+    margin-bottom: 5px;
+    display:flex;
+    color:blue;
+}
+.logo h1{
+     margin-top:15px;
+}
+
+.link{
+     margin-right:84px;
+     margin-left:2px;
+     margin-bottom:5px;
+<!--     margin-top:2px;-->
+     justify-content:space-between;
+     color:green;
+     display:flex;
+
+}
+.link button{
+     background-color:gray;
+     border: 2px solid white;
+     text-align:center;
+     font-size:16px;
+     padding:10px 20px;
+     border-radius: 14px;
+     color:white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+                {% csrf_token %}
+
+             <div class="header">
+            <div class="logo">
+                 <img src= "{% static 'images/logo.png' %}" height="70px" width="70px" class="rounded-circle">
+                <h1>EKA Hospital</h1>
+             </div>
+
+            <div class="link">
+
+                <form action="{% url 'home_page' %}" method="get">
+                <button>About</button>
+                   </form>
+                <form action="{% url 'doctors' %}" method="get">
+                <button>Doctors</button>
+                     </form>
+                    <form action="{% url 'booking' %}" method="get">
+                <button>Booking</button>
+                         </form>
+                 <form action="{% url 'login' %}" method="get">
+                <button>Log Out</button>
+                         </form>
+            </div>
+
+        </div>
+            <div class="drs">
+
+                <h1>Dr.Rajavedha simha</h1>
+                <img src="{% static 'images/dr2.avif' %}" class="rounded-circle" height="400px" width="400px">
+
+                <h4>MBBS.MS General surgery<br>Available on: Monday,Thursday,saterday<br>Time:12 AM - 3 PM</h4>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sequi quia, officia alias est ullam
+            veniam ipsa natus assumenda repudiandae illo fuga sapiente vitae quo labore laboriosam ea quod, autem,
+            inventore ex? Sequi excepturi odio libero unde suscipit necessitatibus quo dolorum voluptatibus laborum
+            tenetur, provident aliquid non beatae nihil aspernatur placeat reiciendis veniam nobis eius quam ex? Atque
+            excepturi modi exercitationem voluptas id laudantium enim consequatur, nemo minus eaque voluptatem beatae
+            consectetur doloremque ducimus odio eveniet ipsum consequuntur sequi, laboriosam ad, quasi quas deleniti
+            minima. Quibusdam voluptatum excepturi iste reprehenderit earum autem beatae laudantium, similique dolor,
+            tempora dolore asperiores doloremque.</p>
+         </div>
+        </form>
+
+    </div>
+</body>
+</html>

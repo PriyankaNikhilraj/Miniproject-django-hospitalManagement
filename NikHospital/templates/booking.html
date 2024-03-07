@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    {% load static %}
+    <style>
+        .glass-background {
+    background: rgba(255, 255, 255, 0.2); /* White with 80% transparency */
+    backdrop-filter: blur(10px); /* Apply backdrop filter for blur effect */
+    border-radius: 10px; /* Add some border radius for rounded corners */
+    padding: 20px 20px 2px 20px; /* Add some padding to see the effect clearly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+body{
+         background-image: url('{% static "images/Pixel-Wallpaper.png" %}');
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent repeating the background image */
+        }
+    .container{
+        padding:5%;
+        margin:50px 500px ;
+         background-color: rgba(255, 192, 203, 0.5);
+            backdrop-filter: blur(40px); /* Apply backdrop filter for blur effect */
+            border-radius:50px ;
+        text-align: center;
+    }
+    input[type=text] {
+        border: 2px solid white;
+        border-radius: 4px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        width: 400px;
+    }
+    button{
+        border: 2px solid white;
+        padding:10px 20px; 
+        border-radius: 14px;
+        background-color: gray;
+    }
+</style>
+</head>
+<body>
+    <div class="container glass-background">
+        <form method="post">
+            {% csrf_token %}
+        <h1>Booking</h1>
+
+            {{form.as_table}}
+
+<!--        <button type="submit" onclick="alert('your Booking is completed')" >Submit</button>-->
+             <button type="submit" >Submit</button>
+
+            </form>
+    </div>
+</body>
+</html>

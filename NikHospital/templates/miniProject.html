@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>*{
+   margin: 0;
+   padding: 0;
+}
+.section h1{
+    text-align: center;
+    color: red;
+    padding-top: 160px;
+    font-size: 70px;
+}
+.container{
+    margin:0;
+    /* box-sizing: border-box; */
+    font-family: 'Times New Roman', Times, serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset;
+
+    position: fixed;
+     background-color: rgba(255, 192, 203, 0.5);
+            backdrop-filter: blur(40px);
+}
+
+.logo{
+     margin-left:45px ;
+    margin-right:21cm;
+/* <!--    margin-top: 2px;--> */
+    margin-bottom: 5px;
+    display:flex;
+    color:blue;
+}
+.logo h1{
+     margin-top:15px;
+}
+
+.link{
+     margin-right:54px;
+     margin-bottom:5px;
+/* <!--     margin-top:2px;--> */
+     justify-content:space-between;
+     color:green;
+     display:flex;
+
+}
+.link button{
+     background-color:gray;
+     border: 2px solid white;
+     text-align:center;
+     font-size:16px;
+     padding:10px 20px;
+     border-radius: 14px;
+     color:white;
+}
+.container h2{
+    text-align: center;
+    color: blue;
+}
+.section1{
+    text-align: center;
+}
+.section2{
+    padding:50px 8cm 50px 8cm;
+          text-align:justify;
+}
+.section1 button{
+    background-color: green;
+    padding:15px 735px
+}
+.section3{
+display:flex;
+justify-content:space-between;
+background-color:gray;
+color:blue;
+padding:0px;
+text-align:center;
+}
+.links{
+   margin:25px 5px 25px 100px;
+}
+.contacts{
+  margin:25px 100px 25px 5px;
+}
+.copy{
+ margin-top:150px
+}
+        .section{
+
+          padding:50px 8cm 50px 8cm;
+          text-align:justify;
+        }
+       .img1{
+           text-align:center;
+       }
+        .one{
+        display:flex;
+        text-align:center;
+        justify-content: space-between;
+        padding:50px 8cm 20px 8cm;
+        }
+        .two{
+        display:flex;
+        text-align:center;
+        justify-content: space-between;
+        padding:50px 8cm 50px 8cm;
+        }
+</style>
+    {% load static %}
+    <link href="{% static 'style/home.css' %}" rel="stylesheet">
+</head>
+<body>
+<form method="post">
+ {% csrf_token %}
+    <script scr="{% static '/home.css' %}"></script>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                 <img src= "{% static 'images/logo.png' %}" height="70px" width="70px" class="rounded-circle">
+                <h1>EKA Hospital</h1>
+             </div>
+
+            <div class="link">
+
+                <form action="{% url 'home_page' %}" method="get">
+                <button>About</button>
+                   </form>
+                <form action="{% url 'doctors' %}" method="get">
+                <button>Doctors</button>
+                     </form>
+                    <form action="{% url 'booking' %}" method="get">
+                <button>Booking</button>
+                         </form>
+                 <form action="{% url 'login' %}" method="get">
+                <button>Log Out</button>
+                         </form>
+            </div>
+
+        </div>
+        <div class="img1">
+            <img src="{% static 'images/background.jpeg' %}" width="1500px">
+            </div>
+        <div class="section">
+
+
+            <p> Obliaue National Hospital is a 750-bed, regional hospital located in London, Kentucky. Founded in 1926, 
+                Obliaue National Hospital opened a new $152 million, 340,000-square foot regional facility in 2010. We offer the latest 
+                technology along with nationally ranked, award-winning services. Our patient rooms are private with most overlooking a 
+                small lake and garden on the 52-acre healing environment. Saint Joseph London treats patients from southeastern Kentucky, 
+                including those from Clay, Laurel, Jackson, Knox, Pulaski, Rockcastle, and Whitley counties.Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit. Dignissimos fuga autem commodi, reprehenderit ullam ea consequatur tempore, soluta 
+                    illo natus doloremque rerum. Iste beatae, ea reprehenderit illum architecto modi molestiae, id aliquid, nesciunt blanditiis
+                     iusto mollitia. Autem error harum ullam, inventore voluptatem, aperiam doloremque ab, quae porro rerum debitis hic? Laudantium
+                      voluptatem quod quisquam sed eum expedita dignissimos, excepturi esse et numquam. Possimus reiciendis nesciunt porro temporibus est.
+                Aut iste provident deleniti voluptate ullam fuga ab vitae, quod earum sunt maiores doloribus molestias, enim nihil! Quod culpa deleniti, temporibus
+                voluptatem obcaecati eveniet expedita consequatur perspiciatis, quis dicta voluptas quibusdam odit!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ad ipsam consectetur sed perferendis tempore? Odit cumque ad obcaecati velit voluptas,
+                quis illum saepe reiciendis libero laboriosam ab harum aperiam nihil placeat deleniti. Eius sequi officia nobis ex, ipsa illum hic. Consequatur quis placeat
+                quas quaerat. Numquam esse atque eos consequatur aspernatur repellat ipsa labore minus eum enim ipsum corporis eaque neque, nesciunt voluptates est vitae,
+                inventore, libero accusamus aliquid similique. Inventore aliquam eius nulla, autem similique dolore laudantium voluptas excepturi rerum nesciunt error
+                numquam quidem veniam optio qui tempora magni libero quos dolorem tempore quod amet? Ratione dignissimos corrupti repudiandae inventore consectetur
+                doloremque placeat enim voluptatibus at ullam minima atque debitis dolorum laborum totam dicta voluptates reiciendis aperiam, officiis rerum magnam
+                error! At quisquam obcaecati pariatur itaque, vel porro in, illum qui sunt, tempora quasi ad vitae et maiores modi repellendus odit? Impedit commodi
+                iusto magnam aliquam labore nulla facere quasi repudiandae ducimus. Nulla illo quas rem autem voluptatibus repellendus fugit minus non, quia veritatis
+                suscipit amet eius cum beatae, animi temporibus, earum dolorum eligendi aperiam magni excepturi ab.<a href="#">Learn more</a></p>
+
+        </div>
+        <div class="section1">
+           <h2>FACILITIES & SERVICES</h2>
+            <div class="faculty">
+                <div class="one">
+                    <div class="im1">
+           <img src="{% static 'images/ambulancelogo.avif' %}" height="70px" width="70px" class="rounded-circle"><br>
+           <a href="#">Ambulance</a>
+                        </div>
+                        <div class="im2">
+           <img src="{% static 'images/emergencycarelogo.jpg' %}" height="70px" width="70px" class="rounded-circle"><br>
+           <a href="#">24/7 emergency Care</a>
+                            </div>
+                            <div class="im3">
+           <img src="{% static 'images/laboratorylogo.jpg' %}" height="70px" width="70px" class="rounded-circle"><br>
+           <a href="#">Laboratory</a>
+                                </div>
+                    </div>
+                <div class="two">
+                     <div class="im4">
+           <img src="{% static 'images/bloodbanklogo.avif' %}" height="70px" width="70px" class="rounded-circle"><br>
+           <a href="#">Blood Bank</a>
+                         </div>
+                          <div class="im5">
+           <img src="{% static 'images/pharmacy_logo.jpg' %}" height="70px" width="70px" class="rounded-circle"><br>
+           <a href="#">Pharmacy</a>
+                              </div>
+                               <div class="im6">
+           <img src="{% static 'images/otlogo.jpg' %}" height="70px" width="70px" class="rounded-circle"><br>
+           <a href="#">OT</a>
+                                   </div>
+                    </div>
+<!--           <a href="#"><button>Booking</button></a>-->
+              </div>
+           
+        </div>
+        <div class="section2">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam quibusdam necessitatibus delectus,
+        earum minus dolor quis repudiandae quo facilis repellendus porro odio vitae maxime nostrum sed excepturi
+        sint sit.A Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, possimus obcaecati voluptate consequatur
+         modi neque tenetur deleniti eius provident mollitia natus debitis nihil placeat accusamus dolore ad sapiente suscipit
+          iure ullam nobis soluta inventore reprehenderit. Eum id reiciendis quisquam, consectetur labore recusandae in debitis
+          consequuntur totam aspernatur sequi commodi. Aliquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci nesciunt dicta modi qui nobis quo
+         reprehenderit ad, enim eius quis rerum, facilis dignissimos a quibusdam numquam sed error ea! Perferendis
+         quas deserunt aut veniam beatae sint numquam doloremque totam mollitia officia incidunt animi odio harum
+         ratione, ipsam, iusto a. Eum repellendus, hic, asperiores fuga maiores cum illo aperiam quos distinctio non
+          ea dignissimos ipsam, inventore modi assumenda aliquid quas mollitia. Natus debitis, libero amet dolorem
+          minima culpa unde ipsam quisquam dolor eius corporis, fugiat labore magnam nobis odit repudiandae minus?
+          Beatae similique vel cupiditate, natus officiis odit mollitia rerum?</p>
+
+
+
+        </div>
+        <div class="section3">
+            <div class="links">
+            <h3>Qiuck Links</h3>
+            
+                <a href="#">Home</a><br>
+                <a href="#">About Us</a><br>
+                <a href="#">Departments</a><br>
+                <a href="#">Fecilities & services</a><br>
+                <a href="#">Careers</a><br>
+                <a href="#">Patients Information</a><br>
+            </div>
+            <div class="copy">
+                <p>@copyright</p>
+            </div>
+           <div class="contacts">
+            <h3>Quick Contacts</h3>
+            <p>Lorem, ipsum dolor sit <br>amet consectetur adipisicing elit.<br> Cupiditate, odit?<br> Ph : 158744963<br> Email : syv@457.eknm.in</p>
+
+
+            </div>
+
+           </div> 
+        </div>
+
+    </form>
+</body>
+</html>
