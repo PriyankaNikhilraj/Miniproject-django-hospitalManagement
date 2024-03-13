@@ -56,7 +56,7 @@ def registration(request):
     #     messages.error(request, 'error,username already exist use another')
     # return redirect('register')
 
-@login_required
+# @login_required
 def booking(request):
     form3 = formz3()
     if request.method == 'POST':
@@ -68,13 +68,13 @@ def booking(request):
         # else:
         #     return render(request,"booking.html",{'form':form3})
     return render(request,"booking.html",context={'form':form3})
-@login_required
+# @login_required
 def home_page(request):
     return render(request,"miniProject.html")
 
 
 
-@login_required
+# @login_required
 def doctors(request):
     return render(request, "doctors.html")
 
